@@ -9,10 +9,43 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
     <header class="bg-gray-300">
-        <h1 class="text-3xl p-2">OptiPitch</h1>
+        <nav id="header" class="fixed w-full bg-white-100 z-10 top-0">
+			<div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+				<div class="pl-4">
+					<a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="#">
+						optiPitch
+					</a>
+				</div>
+
+				<div class="block lg:hidden pr-4">
+					<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
+						<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<title>Menu</title>
+							<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+						</svg>
+					</button>
+				</div>
+
+				<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
+					<ul class="list-reset lg:flex justify-end flex-1 items-center">
+						<li class="mr-3">
+							<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="./index.html">Controleren</a>
+						</li>
+						<li class="mr-3">
+							<a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="./improve.html">Verbeteren</a>
+						</li>
+						<li class="mr-3">
+							<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="./instructions.html">instructies</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
     </header>
+    <div class="container w-full mx-auto pt-20">
     <div class="grid grid-cols-2 gap-20 p-5">
         <div>
             <h2 class="text-xl font-bold p-2">Jou idee</h2>
@@ -53,6 +86,7 @@
                 <br>
             </div>
         </div>
+    </div>
     </div>
     <script src="../src/main.js"></script>
 </body>
